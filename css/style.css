@@ -5,8 +5,11 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   font-size: 1.6rem;
-  font-family: "mplus-1p-regular", sans-serif;
+  font-family: "Mplus 1p", sans-serif;
+  font-feature-settings: "palt" 1;
+
 }
 
 ul {
@@ -120,4 +123,35 @@ a {
 
 .social > li > a:hover {
   color: #2f8efd;
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    margin: 0 auto;
+    width: 93%;
+  }
+  .menu {
+    flex-direction: column;
+  }
+  .menu li {
+    margin: 0;
+    width: 100%;
+  }
+  .menu > li > a {
+    text-align: left;
+  }
+  .section-content {
+    flex: none;
+  }
+  .profile-icon,
+  .profile-content {
+    width: 100%;
+  }
+  .products {
+    flex-direction: column;
+  }
+  .products li {
+    margin: 0 auto;
+    width: 80%;
+  }
 }
