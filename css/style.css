@@ -115,4 +115,9 @@ a {
   display: block;
   font-size: 3.6rem;
   text-align: center;
+  transition: color 0.1s linear;
+}
+
+.social > li > a:hover {
+  color: #2f8efd;
 }
