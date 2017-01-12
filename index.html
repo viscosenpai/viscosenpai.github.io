@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>KAMA Hiroki : Portfolio</title>
+  <title>{KAMA Hiroki: Portfolio}</title>
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="lib/LigatureSymbols/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/picnicss/6.2.5/picnic.min.css">
@@ -31,11 +31,16 @@
   <div class="wrapper">
     <a id="home"></a>
     <header class="header">
-      <h1>KAMA Hiroki : Portfolio</h1>
+      <h1 class="hero">{KAMA Hiroki: Portfolio}</h1>
       <p>Wish web engineer.</p>
-      <ul class="flex four menu">
+    </header>
+    <div class="nav">
+      <ul class="flex five menu">
         <li>
           <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
         </li>
         <li>
           <a href="#profile">Profile</a>
@@ -47,8 +52,17 @@
           <a href="#contact">Contact</a>
         </li>
       </ul>
-    </header>
+    </div>
     <main class="main">
+      <a id="about"></a>
+      <section>
+        <h1>About</h1>
+        <div class="section-content">
+          <h2>このサイトについて</h2>
+          <p>このサイトはAuthorであるKAMA Hirokiが日々の勉強の反映の場として制作したものであると同時にポートフォリオとしても使用しています。<br>開発環境はBrackets, gulp+sassです。</p>
+          <p>本文はGoogle Fontsを使用し、ContactのソーシャルアイコンはLigatureSymbolsという合字フォントを使用しています。</p>
+        </div>
+      </section>
       <a id="profile"></a>
       <section>
         <h1>Profile</h1>
@@ -73,6 +87,8 @@
                 <li class="lv3">jQuery</li>
                 <li class="lv1">PHP</li>
                 <li class="lv1">Ruby on Rails</li>
+                <li class="lv2">MySQL</li>
+                <li class="lv2">PostgreSql</li>
               </ul>
             </div>
           </div>
