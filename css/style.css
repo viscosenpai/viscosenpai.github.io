@@ -38,11 +38,8 @@ img {
   max-width: 980px;
 }
 
-.header > .hero {
+.header > .hero, .header > p {
   letter-spacing: .12em;
-}
-
-.header > p {
   text-align: center;
 }
 
