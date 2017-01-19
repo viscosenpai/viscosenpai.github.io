@@ -20,6 +20,7 @@ ul {
 p {
   font-size: 1.8rem;
   letter-spacing: .1em;
+  margin-bottom: 1em;
   text-align: justify;
 }
 
@@ -141,6 +142,10 @@ img {
   &:hover {
     opacity: .8;
   }
+}
+
+.modal .table_header {
+  white-space: nowrap;
 }
 
 .text-mail {
