@@ -7,7 +7,7 @@ html {
 body {
   box-sizing: border-box;
   font-size: 1.6rem;
-  font-family: "Mplus 1p", sans-serif;
+  font-family: 'Oxygen', "Mplus 1p", sans-serif;
   font-feature-settings: "palt" 1;
 }
 
@@ -19,6 +19,8 @@ ul {
 
 p {
   font-size: 1.8rem;
+  letter-spacing: .1em;
+  text-align: justify;
 }
 
 a {
@@ -37,7 +39,10 @@ img {
 }
 
 .header > {
-  h1, p {
+  .hero {
+    letter-spacing: .12em;
+  }
+  p {
     text-align: center;
   }
 }
@@ -60,13 +65,16 @@ img {
   }
 }
 
-.main h1::after {
-  content: " ";
-  border-bottom: 1px solid #ccc;
-  box-sizing: border-box;
-  display: block;
-  height: 1px;
-  width: 100%;
+.main .title {
+  letter-spacing: .1em;
+  &::after {
+    content: " ";
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    display: block;
+    height: 1px;
+    width: 100%;
+  }
 }
 
 .subsection {
@@ -145,13 +153,14 @@ img {
 .social {
   margin: 0 auto;
   max-width: 30%;
-  > li > a {
-    display: block;
-    font-size: 3.6rem;
+  > li {
     text-align: center;
-    transition: color 0.1s linear;
-    &:hover {
-      color: #2f8efd;
+    > a {
+      font-size: 3.6rem;
+      transition: color 0.1s linear;
+      &:hover {
+        color: #2f8efd;
+      }
     }
   }
 }

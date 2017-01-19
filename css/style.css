@@ -6,7 +6,7 @@ html {
 body {
   box-sizing: border-box;
   font-size: 1.6rem;
-  font-family: "Mplus 1p", sans-serif;
+  font-family: 'Oxygen', "Mplus 1p", sans-serif;
   -webkit-font-feature-settings: "palt" 1;
   font-feature-settings: "palt" 1;
 }
@@ -19,6 +19,8 @@ ul {
 
 p {
   font-size: 1.8rem;
+  letter-spacing: .1em;
+  text-align: justify;
 }
 
 a {
@@ -36,7 +38,11 @@ img {
   max-width: 980px;
 }
 
-.header > h1, .header > p {
+.header > .hero {
+  letter-spacing: .12em;
+}
+
+.header > p {
   text-align: center;
 }
 
@@ -58,7 +64,11 @@ img {
   opacity: .3;
 }
 
-.main h1::after {
+.main .title {
+  letter-spacing: .1em;
+}
+
+.main .title::after {
   content: " ";
   border-bottom: 1px solid #ccc;
   box-sizing: border-box;
@@ -149,10 +159,12 @@ img {
   max-width: 30%;
 }
 
-.social > li > a {
-  display: block;
-  font-size: 3.6rem;
+.social > li {
   text-align: center;
+}
+
+.social > li > a {
+  font-size: 3.6rem;
   -webkit-transition: color 0.1s linear;
   transition: color 0.1s linear;
 }
