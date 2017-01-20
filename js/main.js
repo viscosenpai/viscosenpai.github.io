@@ -27,4 +27,6 @@ $(function () {
       $main.css('margin-top', '0');
     }
   });
+  
+  document.getElementById('email').innerText = 's207ae08k.visco' + '@' + 'gmail.com';
 });

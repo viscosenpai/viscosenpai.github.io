@@ -40,7 +40,12 @@ img {
 }
 
 .header > {
-  .hero ,p {
+  .hero {
+    font-family: 'Pridi', serif;
+    letter-spacing: .12em;
+    text-align: center;
+  }
+  p {
     letter-spacing: .12em;
     text-align: center;
   }
@@ -76,8 +81,12 @@ img {
   }
 }
 
-.subsection {
-  margin: 0 0 30px;
+.section-content {
+  margin: 0 0 60px;
+}
+
+.profile-icon {
+  text-align: center;
 }
 
 .skill {

@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/picnicss/6.2.5/picnic.min.css">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="lib/LigatureSymbols/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen">
   <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/mplus1p.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen|Pridi">
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -97,21 +97,17 @@
       <section>
         <h1 class="title">Deliverables</h1>
         <div class="section-content">
-          <div class="subsection">
-            <p>これまでに業務や自学で制作したもの。
-            <br>画像をクリックすると詳細が表示されます。</p>
-          </div>
-          <div class="subsection">
-            <ul class="flex five products">
-              <li><label for="modal_1" class="herazao"></label></li>
-              <li><label for="modal_2" class="nchoku"></label></li>
-              <li><label for="modal_3" class="packing"></label></li>
-              <li><label for="modal_4" class="library"></label></li>
-              <li><label for="modal_5" class="developer"></label></li>
-              <li><label for="modal_6" class="secret"></label></li>
-            </ul>
-          </div>
-          <div class="modal subsection">
+          <p>これまでに業務や自学で制作したもの。
+          <br>画像をクリックすると詳細が表示されます。</p>
+          <ul class="flex five products">
+            <li><label for="modal_1" class="herazao"></label></li>
+            <li><label for="modal_2" class="nchoku"></label></li>
+            <li><label for="modal_3" class="packing"></label></li>
+            <li><label for="modal_4" class="library"></label></li>
+            <li><label for="modal_5" class="developer"></label></li>
+            <li><label for="modal_6" class="secret"></label></li>
+          </ul>
+          <div class="modal">
             <input id="modal_1" type="checkbox" />
             <label for="modal_1" class="overlay"></label>
             <article>
@@ -154,7 +150,7 @@
               </footer>
             </article>
           </div>
-          <div class="modal subsection">
+          <div class="modal">
             <input id="modal_2" type="checkbox" />
             <label for="modal_2" class="overlay"></label>
             <article>
@@ -197,7 +193,7 @@
               </footer>
             </article>
           </div>
-          <div class="modal subsection">
+          <div class="modal">
             <input id="modal_3" type="checkbox" />
             <label for="modal_3" class="overlay"></label>
             <article>
@@ -240,7 +236,7 @@
               </footer>
             </article>
           </div>
-          <div class="modal subsection">
+          <div class="modal">
             <input id="modal_4" type="checkbox" />
             <label for="modal_4" class="overlay"></label>
             <article>
@@ -283,7 +279,7 @@
               </footer>
             </article>
           </div>
-          <div class="modal subsection">
+          <div class="modal">
             <input id="modal_5" type="checkbox" />
             <label for="modal_5" class="overlay"></label>
             <article>
@@ -326,7 +322,7 @@
               </footer>
             </article>
           </div>
-          <div class="modal subsection">
+          <div class="modal">
             <input id="modal_6" type="checkbox" />
             <label for="modal_6" class="overlay"></label>
             <article>
@@ -379,15 +375,11 @@
       <section>
         <h1 class="title">Contact</h1>
         <div class="section-content">
-          <div class="subsection">
-            <p class="text-mail">s207ae08k.visco@gmail.com</p>
-          </div>
-          <div class="subsection">
-            <ul class="flex two social">
-              <li><a href="https://twitter.com/viscosenpai" class="lsf twitter" target="_blank">twitter</a></li>
-              <li><a href="https://github.com/viscosenpai" class="lsf github" target="_blank">github</a></li>
-            </ul>
-          </div>
+          <p class="text-mail"><span id="email"></span></p>
+          <ul class="flex two social">
+            <li><a href="https://twitter.com/viscosenpai" class="lsf twitter" target="_blank">twitter</a></li>
+            <li><a href="https://github.com/viscosenpai" class="lsf github" target="_blank">github</a></li>
+          </ul>
         </div>
       </section>
     </main>
