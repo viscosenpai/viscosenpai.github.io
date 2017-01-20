@@ -57,9 +57,11 @@ img {
 }
 
 .menu {
+  justify-content: space-between;
   > li {
     margin: 0;
     padding: 0;
+    width: 12%;
     > a {
       display: block;
       text-align: center;
@@ -152,6 +154,10 @@ img {
   &:hover {
     opacity: .8;
   }
+}
+
+.modal article {
+  padding: 2%;
 }
 
 .modal .table_header {
