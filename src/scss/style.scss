@@ -39,8 +39,13 @@ img {
   max-width: 980px;
 }
 
-.header > {
-  .hero {
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  > .hero {
     font-family: 'Pridi', serif;
     font-size: 4.5rem;
     letter-spacing: .12em;
@@ -50,6 +55,17 @@ img {
     letter-spacing: .12em;
     text-align: center;
   }
+  .is-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity transform .5s linear;
+    width: 30px;
+  }
+}
+
+.is-active.is-scroll {
+  opacity: 1;
+  transform: none;
 }
 
 .nav {

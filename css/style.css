@@ -39,24 +39,71 @@ img {
   max-width: 980px;
 }
 
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .header > .hero {
   font-family: 'Pridi', serif;
+  font-size: 4.5rem;
   letter-spacing: .12em;
   text-align: center;
 }
 
-.header > p {
+.header p {
   letter-spacing: .12em;
   text-align: center;
+}
+
+.header .is-scroll {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
+  -webkit-transition: opacity transform .5s linear;
+  transition: opacity transform .5s linear;
+  width: 30px;
+}
+
+.is-active.is-scroll {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 
 .nav {
   padding: 50px 0 40px;
 }
 
+.menu {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .menu > li {
   margin: 0;
   padding: 0;
+  width: 12%;
 }
 
 .menu > li > a {
@@ -155,6 +202,10 @@ img {
 
 .products > li > label:hover {
   opacity: .8;
+}
+
+.modal article {
+  padding: 2%;
 }
 
 .modal .table_header {

@@ -26,14 +26,23 @@
     ga('send', 'pageview');
 
   </script>
+  <style>
+    #console {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  </style>
 </head>
 
 <body>
+  <div id="console"></div>
   <div class="wrapper">
     <a id="home"></a>
     <header class="header">
       <h1 class="hero">{KAMA Hiroki: Portfolio}</h1>
       <p>Wish web engineer.</p>
+      <a class="is-scroll" href="#about"><img src="img/ico_arrow_001.svg" alt="scroll"></a>
     </header>
     <div class="nav">
       <ul class="flex five menu">
@@ -384,6 +393,7 @@
       </section>
     </main>
     <script src="js/main.js"></script>
+    <script src="lib/t.min.js"></script>
   </div>
 </body>
 
