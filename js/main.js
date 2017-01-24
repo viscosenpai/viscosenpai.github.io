@@ -1,10 +1,10 @@
 $(function () {
   var $win = $(window),
+    $header = $('.header')
     $main = $('.main'),
     $hero = $('.hero'),
     $nav = $('.nav'),
     $products = $('.products'),
-    navHeight = $nav.outerHeight(),
     navPos = $nav.offset().top,
     productsPos = $products.offset().top,
     fixedClass = 'is-fixed';
@@ -24,7 +24,7 @@ $(function () {
     var winH = $(window).height() * 0.95;
     if (scrollTop > navPos) {
       $nav.addClass(fixedClass);
-      $main.css('margin-top', navHeight);
+      $main.css('margin-top', $nav.outerHeight());
     } else {
       $nav.removeClass(fixedClass);
       $main.css('margin-top', '0');
@@ -41,7 +41,7 @@ $(function () {
     var speed = 400;
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top - 90;
+    var position = target.offset().top - $nav.outerHeight();
     $("html, body").animate({
       scrollTop: position
     }, speed, "swing");
