@@ -1,6 +1,5 @@
 $(function () {
   var $win = $(window),
-    $header = $('.header')
     $main = $('.main'),
     $hero = $('.hero'),
     $nav = $('.nav'),
@@ -37,7 +36,16 @@ $(function () {
     }
   });
 
+  $('#nav-toggle').on('click', function () {
+    $(this).toggleClass('is-active');
+    $('.menu').toggleClass('is-active');
+  });
+
   $('a[href^="#"]').click(function () {
+    if($('#nav-toggle').hasClass('is-active') && $('.menu').hasClass('is-active')){
+      $('#nav-toggle').removeClass('is-active');
+      $('.menu').removeClass('is-active');
+    }
     var speed = 400;
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);

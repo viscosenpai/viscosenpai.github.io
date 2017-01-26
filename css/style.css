@@ -61,19 +61,23 @@ img {
   height: 100vh;
 }
 
-.header > .hero {
+.hero {
   font-family: 'Pridi', serif;
   font-size: 4.5rem;
   letter-spacing: .12em;
   text-align: center;
 }
 
-.header p {
+.hero .sp-only {
+  display: none;
+}
+
+.lead {
   letter-spacing: .12em;
   text-align: center;
 }
 
-.header .is-scroll {
+.is-scroll {
   opacity: 0;
   -webkit-transform: translateY(30px);
   -ms-transform: translateY(30px);
@@ -92,6 +96,10 @@ img {
 
 .nav {
   padding: 50px 0 40px;
+}
+
+.nav #nav-toggle {
+  display: none;
 }
 
 .menu {
@@ -255,8 +263,77 @@ img {
     margin: 0 auto;
     width: 93%;
   }
+  .hero {
+    font-size: 3.2rem;
+    text-align: left;
+  }
+  .hero .sp-only {
+    display: block;
+  }
   .nav {
+    padding: 0;
     width: 100%;
+  }
+  .nav #nav-toggle {
+    display: block;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 18px;
+    line-height: 2;
+    font-size: 1.2rem;
+    -webkit-transition: color .3s linear;
+    transition: color .3s linear;
+  }
+  .nav #nav-toggle .bar {
+    position: relative;
+    width: 24px;
+    height: 10px;
+    margin: 0 auto 2px;
+  }
+  .nav #nav-toggle .bar span,
+  .nav #nav-toggle .bar span::before,
+  .nav #nav-toggle .bar span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    -webkit-transition-property: opacity, background, -webkit-transform;
+    transition-property: opacity, background, -webkit-transform;
+    transition-property: transform, opacity, background;
+    transition-property: transform, opacity, background, -webkit-transform;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+  .nav #nav-toggle .bar span::before {
+    top: -7px;
+  }
+  .nav #nav-toggle .bar span::after {
+    bottom: -7px;
+  }
+  .nav #nav-toggle.is-active {
+    color: #fff;
+  }
+  .nav #nav-toggle.is-active .bar span {
+    background: transparent;
+  }
+  .nav #nav-toggle.is-active .bar span::before {
+    background: #fff;
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+    -ms-transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .nav #nav-toggle.is-active .bar span::after {
+    background: #fff;
+    -webkit-transform: rotate(-45deg) translate(5px, -5px);
+    -ms-transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(5px, -5px);
   }
   .menu {
     -webkit-box-orient: vertical;
@@ -266,12 +343,30 @@ img {
     flex-direction: column;
     margin: 0;
     width: 100%;
+    padding: 20% 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100vh;
+    opacity: 0;
+    -webkit-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+  }
+  .menu.is-active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
   }
   .menu li {
     margin: 0;
+    width: 100%;
   }
   .menu > li > a {
     text-align: left;
+    color: #fff;
   }
   .section-content {
     -webkit-box-flex: 0;
@@ -280,6 +375,7 @@ img {
     flex: none;
   }
   .profile-icon, .profile-content {
+    padding: 0 0 .6em;
     width: 100%;
   }
   .products {

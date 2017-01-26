@@ -46,22 +46,26 @@ img {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  > .hero {
-    font-family: 'Pridi', serif;
-    font-size: 4.5rem;
-    letter-spacing: .12em;
-    text-align: center;
+}
+
+.hero {
+  font-family: 'Pridi', serif;
+  font-size: 4.5rem;
+  letter-spacing: .12em;
+  text-align: center;
+  .sp-only {
+    display: none;
   }
-  p {
-    letter-spacing: .12em;
-    text-align: center;
-  }
-  .is-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity transform .5s linear;
-    width: 30px;
-  }
+}
+.lead {
+  letter-spacing: .12em;
+  text-align: center;
+}
+.is-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity transform .5s linear;
+  width: 30px;
 }
 
 .is-active.is-scroll {
@@ -71,6 +75,9 @@ img {
 
 .nav {
   padding: 50px 0 40px;
+  #nav-toggle {
+    display: none;
+  }
 }
 
 .menu {
@@ -220,24 +227,98 @@ img {
     margin: 0 auto;
     width: 93%;
   }
+  .hero {
+    font-size: 3.2rem;
+    text-align: left;
+    .sp-only {
+      display: block;
+    }
+  }
   .nav {
+    padding: 0;
     width: 100%;
+    #nav-toggle {
+      display: block;
+      z-index: 1;
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 18px;
+      line-height: 2;
+      font-size: 1.2rem;
+      transition: color .3s linear;
+      .bar {
+        position: relative;
+        width: 24px;
+        height: 10px;
+        margin: 0 auto 2px;
+        span,
+        span::before,
+        span::after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 0;
+          width: 24px;
+          height: 2px;
+          background: #000;
+          transition-property: transform, opacity, background;
+          transition-duration: .3s;
+          transition-timing-function: linear;
+        }
+        span::before {
+          top: -7px;
+        }
+        span::after {
+          bottom: -7px;
+        }
+      }
+      &.is-active {
+        color: #fff;
+      }
+      &.is-active .bar span {
+        background: transparent;
+      }
+      &.is-active .bar span::before {
+        background: #fff;
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      &.is-active .bar span::after {
+        background: #fff;
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
   }
   .menu {
     flex-direction: column;
     margin: 0;
     width: 100%;
+    padding: 20% 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity .3s linear;
+    &.is-active {
+      display: flex;
+      opacity: 1;
+    }
     li {
       margin: 0;
+      width: 100%;
     }
     > li > a {
       text-align: left;
+      color: #fff;
     }
   }
   .section-content {
     flex: none;
   }
   .profile-icon, .profile-content {
+    padding: 0 0 .6em;
     width: 100%;
   }
   .products {
