@@ -346,7 +346,7 @@ img {
     padding: 20% 10%;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100%;
     background: #000;
     height: 100vh;
     opacity: 0;
@@ -359,6 +359,7 @@ img {
     display: -ms-flexbox;
     display: flex;
     opacity: 1;
+    left: 0;
   }
   .menu li {
     margin: 0;
