@@ -4,7 +4,7 @@ $(function () {
     $hero = $('.hero'),
     $nav = $('.nav'),
     $navToggle = $('#nav-toggle'),
-    $menu = $('.menu');
+    $menu = $('.menu'),
     $products = $('.products'),
     fixedClass = 'is-fixed',
     activeClass = 'is-active';
