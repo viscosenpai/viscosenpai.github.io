@@ -6,6 +6,7 @@ $(function () {
     $navToggle = $('#nav-toggle'),
     $menu = $('.menu'),
     $products = $('.products'),
+    navPos = $nav.offset().top,
     fixedClass = 'is-fixed',
     activeClass = 'is-active';
 
@@ -22,7 +23,7 @@ $(function () {
   $win.on('load scroll', function () {
     var scrollTop = $(this).scrollTop();
     var winH = $(window).height() * 0.95;
-    if (scrollTop > $nav.offset().top) {
+    if (scrollTop > navPos) {
       $nav.addClass(fixedClass);
       $main.css('margin-top', $nav.outerHeight());
     } else {
