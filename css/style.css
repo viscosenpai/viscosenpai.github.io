@@ -25,6 +25,16 @@ p {
   text-align: justify;
 }
 
+*::-moz-selection {
+  background: #333;
+  color: #fff;
+}
+
+*::selection {
+  background: #333;
+  color: #fff;
+}
+
 a {
   color: #575757;
   font-size: 1.8rem;
@@ -215,7 +225,7 @@ img {
 }
 
 .products > li > label:hover {
-  opacity: .8;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
 
 .modal article {

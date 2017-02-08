@@ -16,24 +16,24 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('browsersync', () => {
-  browsersync({
-    server: {
-      baseDir: './',
-      index: 'index.html'
-    },
-    port: 8080
-  });
-});
-
+//gulp.task('browsersync', () => {
+//  browsersync({
+//    server: {
+//      baseDir: './',
+//      index: 'index.html'
+//    },
+//    port: 8080
+//  });
+//});
+//
 gulp.task('reload', () => {
   browsersync.reload();
 });
 
-gulp.task('watch', ['sass', 'browsersync'], () => {
+gulp.task('watch', ['sass'], () => {
   gulp.watch('./*.html', ['reload']);
-  gulp.watch('./src/**/*.scss', ['reload']);
+  gulp.watch('./src/**/*.scss', ['sass']);
   gulp.watch('./src/**/*.js', ['reload']);
 });
 
-gulp.task('default', ['watch', 'browsersync']);
+gulp.task('default', ['watch']);
