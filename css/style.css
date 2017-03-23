@@ -59,7 +59,8 @@ img {
   max-width: 980px;
 }
 
-.header {
+.header,
+.private {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
