@@ -190,28 +190,12 @@ img {
   padding: 10px;
 }
 
-.herazao {
-  background: url("../img/img_products_01.png") no-repeat center center;
-}
-
-.nchoku {
-  background: url("../img/img_products_02.png") no-repeat center center;
-}
-
-.packing {
-  background: url("../img/img_products_03.png") no-repeat center center;
-}
-
-.library {
-  background: url("../img/img_products_04.png") no-repeat center center;
-}
-
-.developer {
-  background: url("../img/img_products_05.png") no-repeat center center;
-}
-
 .secret {
   background: url("../img/img_products_06.png") no-repeat center center;
+}
+
+.socket {
+  background: url("../img/img_products_07.png") no-repeat center center;
 }
 
 .products > li > label {
@@ -241,6 +225,18 @@ img {
   text-align: center;
 }
 
+.card, .modal .overlay ~ * {
+  margin-bottom: 1em;
+}
+
+.card section, .modal .overlay ~ * section {
+  padding: 1em 1.5em 0;
+}
+
+button, .button, [type=submit], .dropimage {
+  margin: 1em;
+}
+
 .text-mail {
   margin: 30px 0;
   text-align: center;
@@ -263,6 +259,11 @@ img {
 
 .social > li > a:hover {
   color: #2f8efd;
+}
+
+.footer {
+  padding: 30px 0;
+  text-align: center;
 }
 
 /*グローバルナビ*/
