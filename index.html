@@ -35,7 +35,183 @@
       <p class="lead">Wish web engineer.</p>
       <a class="is-scroll" href="#private"><img src="img/ico_arrow_001.svg" alt="scroll"></a>
     </header>
+<<<<<<< HEAD
     <div id="private">諸般の事情により現在メンテナンス中です。</div>
+=======
+    <div class="nav">
+      <a id="nav-toggle"><div class="bar"><span></span></div>menu</a>
+      <ul class="flex five menu">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#profile">Profile</a>
+        </li>
+        <li>
+          <a href="#deliverables">Deliverables</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <main class="main">
+      <section id="about">
+        <h1 class="title">About</h1>
+        <div class="section-content">
+          <h2>このサイトについて</h2>
+          <p>このサイトはAuthorであるKAMA Hirokiが日々の勉強の反映の場として制作したものであると同時にポートフォリオとしても使用しています。<br>開発環境はBrackets, gulp+sassです。</p>
+          <p>全体のレイアウトは軽量CSSフレームワークのpicnic.cssを使用しました。<br>本文はGoogle Fontsを使用し、ContactのソーシャルアイコンはLigatureSymbolsという合字フォントを使用しています。</p>
+        </div>
+      </section>
+      <section id="profile">
+        <h1 class="title">Profile</h1>
+        <div class="section-content flex two">
+          <p class="profile-icon"><img src="img/img_profile_001.gif" alt="visco"></p>
+          <div class="profile-content">
+            <div class="subsection">
+              <h2>自己紹介</h2>
+              <p>大学中退後、職業訓練校にてweb制作の基礎を学ぶと同時にプログラミングの楽しさを知りシステム開発会社に就職。現在はweb制作会社に勤めています。</p>
+              <p>運用業務の傍らwebサービスやwebプログラミングについて勉強中。好きな言語はJavaScriptで、興味のある言語はPython、scala。</p>
+              <p>趣味は料理・読書・バイクツーリングです。</p>
+            </div>
+            <div class="subsection">
+              <h2>スキル</h2>
+              <ul class="skill">
+                <li class="lv4">HTML5</li>
+                <li class="lv4">CSS3</li>
+                <li class="lv3">JavaScript</li>
+                <li class="lv3">jQuery</li>
+                <li class="lv3">Node.js</li>
+                <li class="lv1">PHP</li>
+                <li class="lv1">Ruby on Rails</li>
+                <li class="lv2">MySQL</li>
+                <li class="lv2">PostgreSql</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="deliverables">
+        <h1 class="title">Deliverables</h1>
+        <div class="section-content">
+          <p>これまでに自学で制作したもの。
+          <br>画像をクリックすると詳細が表示されます。</p>
+          <ul class="flex five products">
+            <li><label for="modal_1" class="secret"></label></li>
+            <li><label for="modal_2" class="socket"></label></li>
+          </ul>
+          <div class="modal">
+            <input id="modal_1" type="checkbox" />
+            <label for="modal_1" class="overlay"></label>
+            <article>
+              <header>
+                <h3>秘密の匿名掲示板</h3>
+                <label for="modal_1" class="close">&times;</label>
+              </header>
+              <section class="content">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td colspan="2">
+                        <a href="https://desolate-reef-56754.herokuapp.com/posts"><img src="img/img_products_06.png" alt="秘密の匿名掲示板"></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table_header">URL</td>
+                      <td><a href="https://desolate-reef-56754.herokuapp.com/posts" target="_blank">https://desolate-reef-56754.herokuapp.com/posts</a></td>
+                    </tr>
+                    <tr>
+                      <td class="table_header">コード</td>
+                      <td><a href="https://github.com/viscosenpai/secret-board" target="_blank">https://github.com/viscosenpai/secret-board</a></td>
+                    </tr>
+                    <tr>
+                      <td class="table_header">詳細</td>
+                      <td><p>N予備校のWebアプリ基礎コースで作成した簡易匿名掲示板
+                      <br>N予備校内テキストに従ってチュートリアル形式で作成</p>
+                        <p>アカウント
+                        <br>ID: guest1
+                        <br>PASS: dUtr7spupHuY</p>
+                      <br>制作期間：約1週間</td>
+                    </tr>
+                    <tr>
+                      <td class="table_header">使用技術</td>
+                      <td>HTML, CSS, Node.js, Bootstrap</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <footer>
+                <label for="modal_1" class="button dangerous">
+                  閉じる
+                </label>
+              </footer>
+            </article>
+          </div>
+          <div class="modal">
+            <input id="modal_2" type="checkbox" />
+            <label for="modal_2" class="overlay"></label>
+            <article>
+              <header>
+                <h3>Socket.IO Chat</h3>
+                <label for="modal_2" class="close">&times;</label>
+              </header>
+              <section class="content">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td colspan="2">
+                        <a href="https://agile-hamlet-23553.herokuapp.com/"><img src="img/img_products_07.png" alt="Socket.IO Chat"</h3>
+                <label for="modal_"></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table_header">URL</td>
+                      <td><a href="https://agile-hamlet-23553.herokuapp.com/" target="_blank">https://agile-hamlet-23553.herokuapp.com/</a></td>
+                    </tr>
+                    <tr>
+                      <td class="table_header">コード</td>
+                      <td><a href="https://github.com/viscosenpai/socket-chat" target="_blank">https://github.com/viscosenpai/socket-chat</a></td>
+                    </tr>
+                    <tr>
+                      <td class="table_header">詳細</td>
+                      <td><p>Express + Socket.IO + PostgreSQL で作成した簡易チャット</p>
+                      <br>制作期間：約3日</td>
+                    </tr>
+                    <tr>
+                      <td class="table_header">使用技術</td>
+                      <td>HTML, CSS, Node.js, socket.io, Bootstrap, PostgreSQL</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <footer>
+                <label for="modal_1" class="button dangerous">
+                  閉じる
+                </label>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h1 class="title">Contact</h1>
+        <div class="section-content">
+          <p class="text-mail"><span id="email"></span></p>
+          <ul class="flex two social">
+            <li><a href="https://twitter.com/viscosenpai" class="lsf twitter" target="_blank">twitter</a></li>
+            <li><a href="https://github.com/viscosenpai" class="lsf github" target="_blank">github</a></li>
+          </ul>
+        </div>
+      </section>
+      <footer class="footer">
+        <small>Copylight KAMA Hiroki 2017</small>
+      </footer>
+    </main>
+>>>>>>> dev
     <script src="js/main.js"></script>
     <script src="lib/t.min.js"></script>
   </div>
