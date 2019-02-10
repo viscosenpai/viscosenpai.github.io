@@ -15,6 +15,7 @@ $(function () {
       speed: 60,
       speed_vary: true,
       fin: function () {
+        $('.lead').addClass(activeClass);
         $('.is-scroll').addClass(activeClass);
       }
     });

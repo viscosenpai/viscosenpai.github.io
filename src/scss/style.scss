@@ -79,6 +79,7 @@ img {
 }
 
 .hero {
+  display: none;
   font-family: 'Pridi', serif;
   font-size: 4.5rem;
   letter-spacing: .12em;
@@ -86,6 +87,8 @@ img {
 }
 
 .lead {
+  opacity: 0;
+  transition: opacity .5s linear;
   letter-spacing: .12em;
   text-align: center;
   z-index: 11;
@@ -99,7 +102,7 @@ img {
   z-index: 12;
 }
 
-.is-active.is-scroll {
+.is-active {
   opacity: 1;
   transform: none;
 }
