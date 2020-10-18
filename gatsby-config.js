@@ -33,7 +33,15 @@ module.exports = {
             aliases:{sh: "bash", js:"javascript"},
             showLineNumbers: true,
           }
-        }],
+        },
+        {
+          resolve: 'gatsby-remark-external-links',
+          options: {
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          },
+        },
+      ],
       },
     },
     {

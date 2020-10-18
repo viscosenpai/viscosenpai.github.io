@@ -35,6 +35,18 @@ const BorderParagraph = styled.p`
   margin-bottom: 2.5rem;
   padding-bottom: 12px;
   border-bottom: 1px solid #595959;
+  a {
+    text-decoration: none;
+    position: relative;
+
+    background-image: linear-gradient(
+      rgba(255, 250, 150, 0.8),
+      rgba(255, 250, 150, 0.8)
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+  }
 `
 
 const Profile = () => (
@@ -43,16 +55,16 @@ const Profile = () => (
     <ProfileContents>
       <MarkerHeader>Personal</MarkerHeader>
       <BorderParagraph>
-        <strong>KAMA Hiroki (@viscosenpai)</strong><br />
+        <strong>KAMA Hiroki (<a href="https://twitter.com/viscosenpai" target="_blank" rel="noopener noreferrer">@viscosenpai</a>)</strong><br />
         福岡県在住のエンジニア<br />
         平穏で落ち着いた生活の実現のためにいろいろ試行中<br />
-        バイク(SR400)に載ってたがお休み中<br />
+        バイク(SR400)に乗ってたけどお休み中<br />
         アイマスP
       </BorderParagraph>
       <MarkerHeader>Skills</MarkerHeader>
       <BorderParagraph>
         現職ではPHP, Laravel, FuelPHPを使用したバックエンド業務<br />
-        Kotlinを使用したAndroidアプリ開発を経験<br />
+        Kotlinを使用したAndroidアプリ開発等を経験<br />
         インフラ周りはVagrantやDockerなど一般的な範囲で使用可<br />
         JavaScriptいじりが趣味, 特にReactを中心に学習中
       </BorderParagraph>
