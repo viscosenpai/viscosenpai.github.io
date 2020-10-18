@@ -26,6 +26,18 @@ const MarkerHeader = styled.h3`
 const WorkContent = styled.div`
   margin-bottom: 2.5rem;
   padding-bottom: 12px;
+  a {
+    text-decoration: none;
+    position: relative;
+
+    background-image: linear-gradient(
+      rgba(255, 250, 150, 0.8),
+      rgba(255, 250, 150, 0.8)
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+  }
 `
 
 const WorkHeader = styled.h4`
