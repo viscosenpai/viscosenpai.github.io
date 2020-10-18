@@ -2,7 +2,7 @@
 title: "中学数学を学び直してます"
 date: "2020-10-19"
 draft: false
-path: "/blog/re-learning-junior-high-school-mathematics"
+path: "/blog/re-learning-mathematics"
 ---
 
 実質書評です
