@@ -50,6 +50,15 @@
   Link: </component---src-templates-blog-post-js-211fd301275fd857341d.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/blog/re-learning-mathematics/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/time-and-money-for-friends
+  Link: </webpack-runtime-dbaf8a030d986ace595a.js>; rel=preload; as=script
+  Link: </styles-89fd2ae28bdf06750a71.js>; rel=preload; as=script
+  Link: </framework-8dcecaaefd71e2213eb2.js>; rel=preload; as=script
+  Link: </app-70819a3d8bb532845483.js>; rel=preload; as=script
+  Link: </commons-305b0b7802ce9fb13813.js>; rel=preload; as=script
+  Link: </component---src-templates-blog-post-js-211fd301275fd857341d.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/blog/time-and-money-for-friends/page-data.json>; rel=preload; as=fetch; crossorigin
 /404/
   Link: </webpack-runtime-dbaf8a030d986ace595a.js>; rel=preload; as=script
   Link: </styles-89fd2ae28bdf06750a71.js>; rel=preload; as=script
