@@ -18,6 +18,26 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Setting Tutorial
+
+[Next.js 最速セットアップ](https://zenn.dev/a_da_chi/articles/181ea4ccc39580)
+
+[Next.js+Chakra UI プロジェクトに Jest を導入して GitHub Actions でユニットテストをする](https://zenn.dev/a_da_chi/articles/0ea66053a8b778)
+
+[Renovate と GitHub Actions を導入し「なくてはならない存在」に | はてなで働く ikesyo にアンケート [#17] - Hatena Developer Blog](https://developer.hatenastaff.com/entry/2021/06/23/093000#RenovateGitHub-Actions%E3%81%AE%E5%B0%8E%E5%85%A5%E3%82%92%E6%8E%A8%E9%80%B2%E3%81%97%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E6%A0%B9%E4%BB%98%E3%81%84%E3%81%A6%E3%81%8D%E3%81%9F)
+
+[Next.js プロジェクトに Cypress を導入して GitHub Actions で Vercel の Preview 環境の E2E テストをする](https://zenn.dev/a_da_chi/articles/7ba871c23c5510)
+
+[Cypress 入門～初心者でも簡単に E2E テストが作れる～ | フューチャー技術ブログ](https://future-architect.github.io/articles/20210428a/)
+
+[Next.js+Chakra UI プロジェクトに Storybook を導入する](https://zenn.dev/a_da_chi/articles/2128cecc29635a)
+
+[Storybook を使って React の開発を X 倍早くしよう！！便利なアドオンの使い方を紹介 | microCMS ブログ](https://blog.microcms.io/storybook-react-use/)
+
+[hygen でコンポーネントの雛形を生成する](https://zenn.dev/a_da_chi/articles/8eb5b2e06ed54b)
+
+[hygen で生成 - 対話形式の Component 雛形 -](https://zenn.dev/takepepe/articles/hygen-template-generator)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
