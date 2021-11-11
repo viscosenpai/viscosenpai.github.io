@@ -1,7 +1,9 @@
-import { Box, chakra } from '@chakra-ui/react';
 import React from 'react';
-import { getAllPosts } from '../lib/api';
-import Post from '../types/post';
+import { Box, chakra } from '@chakra-ui/react';
+import { getAllPosts } from 'src/lib/api';
+import Post from 'src/types/post';
+import Layout from 'src/components/layout';
+import Hero from 'src/components/hero';
 
 type Props = {
   allPosts: Post[];
@@ -9,8 +11,9 @@ type Props = {
 
 export default function Home({ allPosts }: Props) {
   return (
-    <>
-      <Box>
+    <Layout>
+      <Hero />
+      {/* <Box>
         <chakra.h1 color="tomato">Hello World!</chakra.h1>
       </Box>
       <ul>
@@ -22,8 +25,8 @@ export default function Home({ allPosts }: Props) {
             </li>
           );
         })}
-      </ul>
-    </>
+      </ul> */}
+    </Layout>
   );
 }
 
