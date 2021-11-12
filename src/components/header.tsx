@@ -19,7 +19,7 @@ const Header = () => {
       alignItems="center"
       justify="center"
       padding="1rem"
-      fontSize="1.2rem"
+      fontSize="1.5rem"
     >
       <Box maxW="890px">
         <NavLink href="/">HOME</NavLink>

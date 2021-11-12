@@ -4,6 +4,7 @@ import { getAllPosts } from 'src/lib/api';
 import Post from 'src/types/post';
 import Layout from 'src/components/layout';
 import Hero from 'src/components/hero';
+import SEO from 'src/components/seo';
 
 type Props = {
   allPosts: Post[];
@@ -11,9 +12,11 @@ type Props = {
 
 export default function Home({ allPosts }: Props) {
   return (
-    <Layout>
-      <Hero />
-      {/* <Box>
+    <>
+      <SEO />
+      <Layout>
+        <Hero />
+        {/* <Box>
         <chakra.h1 color="tomato">Hello World!</chakra.h1>
       </Box>
       <ul>
@@ -26,7 +29,8 @@ export default function Home({ allPosts }: Props) {
           );
         })}
       </ul> */}
-    </Layout>
+      </Layout>
+    </>
   );
 }
 
