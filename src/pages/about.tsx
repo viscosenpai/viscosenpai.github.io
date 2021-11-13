@@ -25,7 +25,7 @@ const About = () => {
             flexDir={['column', 'row']}
           >
             <Box as="span" mt="6%" width={['100%', '40%']} textAlign="center">
-              <Image src="images/profile_image.jpeg" alt="@viscosenpai" />
+              <Image src="/images/profile_image.jpeg" alt="@viscosenpai" />
             </Box>
             <Box width={['100%', '60%']}>
               <MarkerHeader>Profile</MarkerHeader>
