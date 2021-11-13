@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
+import getReadTime from './readTime';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
@@ -13,9 +14,10 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
+  const readTime = getReadTime(content);
 
   type Items = {
-    [key: string]: string;
+    [key: string]: string | number;
   };
 
   const items: Items = {};
@@ -27,6 +29,10 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     }
     if (field === 'content') {
       items[field] = content;
+    }
+
+    if (field === 'readTime') {
+      items[field] = readTime;
     }
 
     if (typeof data[field] !== 'undefined') {
@@ -42,6 +48,7 @@ export function getAllPosts(fields: string[] = []) {
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
     // sort posts by date in descending order
+    .filter((post) => !post.draft)
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }

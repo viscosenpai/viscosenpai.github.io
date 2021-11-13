@@ -5,6 +5,7 @@ type PostType = {
   draft: boolean;
   path: string;
   content: string;
+  readTime: number;
 };
 
 export default PostType;
