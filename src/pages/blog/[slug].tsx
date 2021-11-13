@@ -23,15 +23,19 @@ const HeaderDate: FC<Props> = (props) => (
   <chakra.h4 mt="10px" fontSize="2xl" fontWeight="bold" {...props} />
 );
 
-const createStyle = (gradientColor: string) => styled.div`
+const createStyle = (params: {
+  linkColor: string;
+  linkUnderLineColor: string;
+}) => styled.div`
   a {
     text-decoration: none;
     position: relative;
-    background-image: ${gradientColor};
+    background-image: ${params.linkUnderLineColor};
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
     background-position: 0 88%;
     transition: background-size 0.25s ease-in;
+    color: ${params.linkColor};
     &:hover {
       background-size: 100% 88%;
     }
@@ -39,11 +43,16 @@ const createStyle = (gradientColor: string) => styled.div`
 `;
 
 const Post = ({ post, morePosts, preview }: PostProps) => {
+  const linkColor = useColorModeValue('#202020', '#ffffff');
   const linkUnderLineColor = useColorModeValue(
     'linear-gradient( #fffa96cc, #fffa96cc)',
-    'linear-gradient( #f92672cc, #f92672cc)'
+    'linear-gradient( #054d6ecc, #054d6ecc)'
   );
-  const MarkdownContent = createStyle(linkUnderLineColor);
+  const contentParams = {
+    linkColor,
+    linkUnderLineColor,
+  };
+  const MarkdownContent = createStyle(contentParams);
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;

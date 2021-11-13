@@ -27,9 +27,14 @@ const About = () => {
             <Box as="span" mt="6%" width={['100%', '40%']} textAlign="center">
               <Image src="/images/profile_image.jpeg" alt="@viscosenpai" />
             </Box>
-            <Box width={['100%', '60%']}>
+            <Box width={['100%', '60%']} ml={['0', '40px']}>
               <MarkerHeader>Profile</MarkerHeader>
-              <chakra.p mb="2.5rem" pb="2" borderBottom="1px solid gray">
+              <chakra.p
+                mt="1.5"
+                mb="2.5rem"
+                pb="2"
+                borderBottom="1px solid gray"
+              >
                 <strong>KAMA Hiroki (@viscosenpai)</strong>
                 <br />
                 福岡県在住の(Web, アプリケーション)エンジニア
@@ -41,7 +46,12 @@ const About = () => {
                 アイマスP
               </chakra.p>
               <MarkerHeader>Skills</MarkerHeader>
-              <chakra.p mb="2.5rem" pb="2" borderBottom="1px solid gray">
+              <chakra.p
+                mt="1.5"
+                mb="2.5rem"
+                pb="2"
+                borderBottom="1px solid gray"
+              >
                 PHP, Laravelを用いたシステム開発
                 <br />
                 JamStackサイト開発
@@ -61,7 +71,7 @@ const About = () => {
           <Flex justify="center" mb="6.67" width="100%">
             <Box mb="2.5rem" pb="12px">
               <MarkerHeader>Work</MarkerHeader>
-              <Box width="100%">
+              <Box width="100%" mt="2">
                 <chakra.h4 mx="auto" my="0">
                   ハンバーガーオーダーWebアプリ
                 </chakra.h4>

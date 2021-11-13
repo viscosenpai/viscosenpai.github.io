@@ -22,7 +22,6 @@ const styles = {
         '"Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif',
       WebkitFontSmoothing: 'antialiased',
       MozOsxFontSmoothing: 'grayscale',
-      color: 'hsla(0, 0%, 0%, 0.8)',
       fontWeight: 'normal',
       wordWrap: 'break-word',
       fontKerning: 'normal',
