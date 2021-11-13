@@ -1,52 +1,66 @@
+import { FC } from 'react';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-// import PostHeader from '../../components/post-header';
-// import Layout from '../../components/layout';
+import { chakra } from '@chakra-ui/system';
+import { Box } from '@chakra-ui/layout';
+import { useColorModeValue } from '@chakra-ui/react';
+import styled from '@emotion/styled';
+import { Props } from 'framer-motion/types/types';
 import { getPostBySlug, getAllPosts } from '../../lib/api';
-// import PostTitle from '../../components/post-title';
-import Head from 'next/head';
 import markdownToHtml from '../../lib/markdownToHtml';
 import PostType from '../../types/post';
+import SEO from 'src/components/seo';
+import Layout from 'src/components/layout';
+import MarkerHeader from 'src/components/markerHeader';
 
-type Props = {
+type PostProps = {
   post: PostType;
   morePosts: PostType[];
   preview?: boolean;
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const HeaderDate: FC<Props> = (props) => (
+  <chakra.h4 mt="10px" fontSize="2xl" fontWeight="bold" {...props} />
+);
+
+const createStyle = (gradientColor: string) => styled.div`
+  a {
+    text-decoration: none;
+    position: relative;
+    background-image: ${gradientColor};
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    &:hover {
+      background-size: 100% 88%;
+    }
+  }
+`;
+
+const Post = ({ post, morePosts, preview }: PostProps) => {
+  const linkUnderLineColor = useColorModeValue(
+    'linear-gradient( #fffa96cc, #fffa96cc)',
+    'linear-gradient( #f92672cc, #f92672cc)'
+  );
+  const MarkdownContent = createStyle(linkUnderLineColor);
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <div>post page</div>
-    // <Layout preview={preview}>
-    //   <Container>
-    //     <Header />
-    //     {router.isFallback ? (
-    //       <PostTitle>Loading…</PostTitle>
-    //     ) : (
-    //       <>
-    //         <article className="mb-32">
-    //           <Head>
-    //             <title>
-    //               {post.title} | Next.js Blog Example with {CMS_NAME}
-    //             </title>
-    //             <meta property="og:image" content={post.ogImage.url} />
-    //           </Head>
-    //           <PostHeader
-    //             title={post.title}
-    //             coverImage={post.coverImage}
-    //             date={post.date}
-    //             author={post.author}
-    //           />
-    //           <PostBody content={post.content} />
-    //         </article>
-    //       </>
-    //     )}
-    //   </Container>
-    // </Layout>
+    <>
+      <SEO title={post.title} description="" />
+      <Layout>
+        <Box mx="auto" my="0" maxW="890px" px="1.5rem" py="1rem">
+          <MarkerHeader fontSize="2.25rem">{post.title}</MarkerHeader>
+          <HeaderDate>
+            {post.date} - {post.readTime} min read.
+          </HeaderDate>
+          <MarkdownContent dangerouslySetInnerHTML={{ __html: post.content }} />
+        </Box>
+      </Layout>
+    </>
   );
 };
 
@@ -61,12 +75,14 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
     'title',
-    'slug',
     'date',
+    'path',
     'slug',
+    'draft',
+    'readTime',
     'content',
   ]);
-  const content = await markdownToHtml(post.content || '');
+  const content = await markdownToHtml(post.content);
 
   return {
     props: {
