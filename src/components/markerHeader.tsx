@@ -8,7 +8,7 @@ const MarkerHeader: FC<Props> = (props) => (
     borderRadius="1em 0 1em 0"
     bgGradient={useColorModeValue(
       'linear(to-r, #fffa96cc, #fffa9626)',
-      'linear(to-r, #f92672cc, #fffa9626)'
+      'linear(to-r, #2657f9cc, #fffa9626)'
     )}
     fontSize="1.6rem"
     fontWeight="bold"

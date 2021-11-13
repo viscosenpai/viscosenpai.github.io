@@ -18,11 +18,16 @@ const About = () => {
       <Layout>
         <Box mx="auto" my="0" maxW="890px" px="1.5rem" py="1rem">
           <PageHeader>About</PageHeader>
-          <Flex mb="40px" justify="center" width="100%">
-            <Box as="span" mt="6%" width="40%" textAlign="center">
+          <Flex
+            mb="40px"
+            justify="center"
+            width="100%"
+            flexDir={['column', 'row']}
+          >
+            <Box as="span" mt="6%" width={['100%', '40%']} textAlign="center">
               <Image src="images/profile_image.jpeg" alt="@viscosenpai" />
             </Box>
-            <Box width="60%">
+            <Box width={['100%', '60%']}>
               <MarkerHeader>Profile</MarkerHeader>
               <chakra.p mb="2.5rem" pb="2" borderBottom="1px solid gray">
                 <strong>KAMA Hiroki (@viscosenpai)</strong>

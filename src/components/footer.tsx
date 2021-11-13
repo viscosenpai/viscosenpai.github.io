@@ -5,8 +5,8 @@ import { chakra } from '@chakra-ui/system';
 const Footer = () => {
   const FooterLink: FC<LinkProps> = (props) => <Link ml="15px" {...props} />;
   return (
-    <Flex as="footer" justify="center">
-      <p>© {new Date().getFullYear()}, KAMA Hiroki</p>
+    <Flex as="footer" mb="1.5rem" justify="center">
+      <chakra.p>© {new Date().getFullYear()}, KAMA Hiroki</chakra.p>
       <FooterLink href="/">Privacy Policy</FooterLink>
       <FooterLink href="https://nextjs.org/">Next.js</FooterLink>
     </Flex>
