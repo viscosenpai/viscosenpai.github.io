@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <Flex as="footer" mb="1.5rem" justify="center">
       <chakra.p>© {new Date().getFullYear()}, KAMA Hiroki</chakra.p>
-      <FooterLink href="/">Privacy Policy</FooterLink>
+      <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
       <FooterLink href="https://nextjs.org/">Next.js</FooterLink>
     </Flex>
   );
