@@ -6,7 +6,7 @@ import SEO from 'src/components/seo';
 import Layout from 'src/components/layout';
 import PageHeader from 'src/components/pageHeader';
 import MarkerHeader from 'src/components/markerHeader';
-import MarkerLink from 'src/components/markerLink';
+import Works from 'src/components/works';
 
 const About = () => {
   return (
@@ -32,7 +32,7 @@ const About = () => {
               <chakra.p
                 mt="1.5"
                 mb="2.5rem"
-                pb="2"
+                pb="8"
                 borderBottom="1px solid gray"
               >
                 <strong>KAMA Hiroki (@viscosenpai)</strong>
@@ -49,7 +49,7 @@ const About = () => {
               <chakra.p
                 mt="1.5"
                 mb="2.5rem"
-                pb="2"
+                pb="8"
                 borderBottom="1px solid gray"
               >
                 PHP, Laravelを用いたシステム開発
@@ -64,51 +64,14 @@ const About = () => {
                 <br />
                 インフラ、クラウドは素人に毛が生えた程度
                 <br />
-                個人開発でFlutterアプリ開発中（2021/12現在）
+                個人開発でFlutterアプリ開発
               </chakra.p>
             </Box>
           </Flex>
           <Flex justify="center" mb="6.67" width="100%">
             <Box mb="2.5rem" pb="12px">
               <MarkerHeader>Work</MarkerHeader>
-              <Box width="100%" mt="2">
-                <chakra.h4 mx="auto" my="0">
-                  ハンバーガーオーダーWebアプリ
-                </chakra.h4>
-                <p>
-                  Udemyの
-                  <MarkerLink
-                    href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Reactコース
-                  </MarkerLink>
-                  で制作した習作Webアプリ
-                  <br />
-                  クラスコンポーネント, 関数コンポーネント, 非同期処理,
-                  バリデーション, Redux, テスト, デプロイ, React
-                  Hooksなど一通りの機能は網羅
-                  <br />
-                  デプロイしたアプリは
-                  <MarkerLink
-                    href="https://react-my-burger-4e9f1.web.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    こちら
-                  </MarkerLink>
-                  <br />
-                  Githubは
-                  <MarkerLink
-                    href="https://github.com/viscosenpai/react-complete-guide"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    こちら
-                  </MarkerLink>
-                </p>
-              </Box>
+              <Works />
             </Box>
           </Flex>
         </Box>
